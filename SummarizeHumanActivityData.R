@@ -75,7 +75,7 @@ library(dplyr)
 
 tidyData<- extracteddata %>%  group_by(Activity,Subject) %>%   summarise_all(funs(mean))
 
-write.table(tidyData, "tidyData.txt", quote= FALSE)
+write.table(tidyData, "tidyData.txt",row.name=FALSE, quote= FALSE)
 
 
 #remove the intermediary data
